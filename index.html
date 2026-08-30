@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4c1d95" />
+  <title>Portal Digital UBK | SMK Sungai Besar</title>
+  <style>
+    :root {
+      --purple-950:#2e1065;
+      --purple-900:#3b0764;
+      --purple-800:#4c1d95;
+      --purple-700:#6d28d9;
+      --purple-600:#7c3aed;
+      --purple-500:#8b5cf6;
+      --lavender:#f5f3ff;
+      --lavender-2:#ede9fe;
+      --ink:#17142a;
+      --muted:#6b7280;
+      --line:#e8e3f1;
+      --white:#ffffff;
+      --green:#22c55e;
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:#f8f7fc;
+      color:var(--ink);
+      line-height:1.55;
+    }
+    a { color:inherit; text-decoration:none; }
+    img { display:block; max-width:100%; }
+
+    .hero {
+      min-height:590px;
+      position:relative;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:42px 20px 70px;
+      overflow:hidden;
+      color:white;
+      background:
+        linear-gradient(135deg, rgba(46,16,101,.88), rgba(91,33,182,.68)),
+        url("assets/smk-sungai-besar.jpg") center/cover no-repeat;
+    }
+
+    .hero::before {
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.13), transparent 30%),
+        radial-gradient(circle at 80% 10%, rgba(196,181,253,.22), transparent 28%);
+      pointer-events:none;
+    }
+
+    .hero-inner {
+      width:min(920px, 100%);
+      position:relative;
+      z-index:1;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+
+    .logo-wrap {
+      width:116px;
+      height:116px;
+      display:grid;
+      place-items:center;
+      background:rgba(255,255,255,.96);
+      border-radius:22px;
+      padding:10px;
+      box-shadow:0 16px 34px rgba(20,10,60,.28);
+      margin-bottom:18px;
+    }
+
+    .logo-wrap img {
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+
+    .eyebrow {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      border:1px solid rgba(255,255,255,.28);
+      background:rgba(255,255,255,.12);
+      backdrop-filter:blur(8px);
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+
+    h1 {
+      font-size:clamp(2.4rem, 6vw, 5.2rem);
+      line-height:.98;
+      letter-spacing:-.045em;
+      margin-bottom:18px;
+      text-shadow:0 4px 18px rgba(0,0,0,.25);
+    }
+
+    .hero p {
+      max-width:720px;
+      font-size:clamp(1rem, 2vw, 1.18rem);
+      color:#f4efff;
+    }
+
+    .hero-actions {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      justify-content:center;
+      margin-top:26px;
+    }
+
+    .btn {
+      min-height:48px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:0 18px;
+      font-weight:800;
+      border-radius:12px;
+      transition:.2s ease;
+    }
+
+    .btn-light {
+      background:white;
+      color:var(--purple-900);
+      box-shadow:0 10px 24px rgba(20,10,60,.18);
+    }
+
+    .btn-glass {
+      border:1px solid rgba(255,255,255,.4);
+      background:rgba(255,255,255,.1);
+      color:white;
+    }
+
+    .btn:hover { transform:translateY(-2px); }
+
+    .shell {
+      width:min(1120px, calc(100% - 32px));
+      margin:auto;
+    }
+
+    .announcement {
+      margin-top:-36px;
+      position:relative;
+      z-index:3;
+    }
+
+    .announcement-card {
+      background:white;
+      border:1px solid var(--line);
+      box-shadow:0 18px 45px rgba(58,25,110,.12);
+      border-radius:16px;
+      padding:20px 22px;
+      display:grid;
+      grid-template-columns:48px 1fr;
+      gap:14px;
+      align-items:start;
+    }
+
+    .announcement-icon {
+      width:48px;
+      height:48px;
+      border-radius:14px;
+      background:var(--lavender-2);
+      display:grid;
+      place-items:center;
+      font-size:1.35rem;
+    }
+
+    .announcement-card strong {
+      display:block;
+      color:var(--purple-900);
+      margin-bottom:4px;
+    }
+
+    .section {
+      padding:60px 0;
+    }
+
+    .section-title {
+      text-align:left;
+      max-width:760px;
+      margin-bottom:28px;
+    }
+
+    .section-title span {
+      color:var(--purple-700);
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-size:.78rem;
+    }
+
+    .section-title h2 {
+      font-size:clamp(1.9rem, 4vw, 3.1rem);
+      line-height:1.05;
+      letter-spacing:-.03em;
+      margin:8px 0 8px;
+    }
+
+    .section-title p {
+      color:var(--muted);
+      max-width:680px;
+    }
+
+    .portal-grid {
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:18px;
+    }
+
+    .portal-card {
+      background:white;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:22px;
+      min-height:210px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      box-shadow:0 8px 22px rgba(49,24,92,.05);
+      transition:.2s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .portal-card::after {
+      content:"";
+      position:absolute;
+      width:88px;
+      height:88px;
+      border-radius:50%;
+      right:-34px;
+      top:-34px;
+      background:var(--lavender);
+    }
+
+    .portal-card:hover {
+      transform:translateY(-4px);
+      box-shadow:0 16px 32px rgba(49,24,92,.11);
+      border-color:#d7ccf4;
+    }
+
+    .portal-card.featured {
+      grid-column:span 2;
+      background:linear-gradient(135deg, var(--purple-900), var(--purple-700));
+      color:white;
+      border-color:transparent;
+      min-height:250px;
+    }
+
+    .portal-card.featured::after {
+      width:160px;
+      height:160px;
+      background:rgba(255,255,255,.08);
+      right:-50px;
+      top:-40px;
+    }
+
+    .icon {
+      width:50px;
+      height:50px;
+      border-radius:14px;
+      background:var(--lavender);
+      display:grid;
+      place-items:center;
+      font-size:1.45rem;
+      margin-bottom:16px;
+      position:relative;
+      z-index:1;
+    }
+
+    .featured .icon {
+      background:rgba(255,255,255,.12);
+    }
+
+    .portal-card h3 {
+      font-size:1.18rem;
+      margin-bottom:6px;
+      position:relative;
+      z-index:1;
+    }
+
+    .featured h3 {
+      font-size:clamp(1.7rem, 3.5vw, 2.8rem);
+      line-height:1;
+      letter-spacing:-.03em;
+      max-width:520px;
+    }
+
+    .portal-card p {
+      color:var(--muted);
+      font-size:.94rem;
+      margin-bottom:16px;
+      position:relative;
+      z-index:1;
+    }
+
+    .featured p {
+      color:#e9ddff;
+      max-width:600px;
+    }
+
+    .open-link {
+      color:var(--purple-700);
+      font-weight:800;
+      position:relative;
+      z-index:1;
+    }
+
+    .featured .open-link {
+      color:white;
+    }
+
+    .contact-section {
+      background:linear-gradient(180deg, #21143e 0%, #160d2f 100%);
+      color:white;
+    }
+
+    .contact-section .section-title h2 { color:white; }
+    .contact-section .section-title p { color:#cfc6df; }
+    .contact-section .section-title span { color:#c4b5fd; }
+
+    .contact-grid {
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:14px;
+    }
+
+    .contact-card {
+      border:1px solid rgba(255,255,255,.13);
+      background:rgba(255,255,255,.06);
+      border-radius:14px;
+      padding:20px;
+    }
+
+    .contact-card h3 {
+      margin-bottom:6px;
+      font-size:1.12rem;
+    }
+
+    .contact-card p {
+      color:#cfc6df;
+      font-size:.9rem;
+      margin-bottom:14px;
+    }
+
+    .wa-button {
+      width:100%;
+      min-height:44px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--green);
+      color:white;
+      font-weight:800;
+      border-radius:10px;
+    }
+
+    footer {
+      background:#0f0920;
+      color:#9c93ad;
+      padding:24px 0;
+      font-size:.88rem;
+    }
+
+    footer .shell {
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width:860px) {
+      .portal-grid {
+        grid-template-columns:repeat(2, minmax(0,1fr));
+      }
+      .portal-card.featured {
+        grid-column:span 2;
+      }
+      .contact-grid {
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width:560px) {
+      .hero {
+        min-height:540px;
+        padding-bottom:64px;
+      }
+      .logo-wrap {
+        width:100px;
+        height:100px;
+      }
+      .portal-grid {
+        grid-template-columns:1fr;
+      }
+      .portal-card.featured {
+        grid-column:span 1;
+      }
+      .section {
+        padding:48px 0;
+      }
+      .announcement-card {
+        grid-template-columns:42px 1fr;
+        padding:17px;
+      }
+      .announcement-icon {
+        width:42px;
+        height:42px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="logo-wrap">
+        <img src="assets/logo-smk-sungai-besar.png" alt="Logo rasmi SMK Sungai Besar">
+      </div>
+      <div class="eyebrow">Unit Bimbingan &amp; Kaunseling</div>
+      <h1>Portal Digital UBK<br>SMK Sungai Besar</h1>
+      <p>Satu pusat akses untuk semakan akademik, perancangan SPM, STEM, sasaran diri dan perkhidmatan bimbingan murid.</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="#portal">Buka Portal</a>
+        <a class="btn btn-glass" href="#hubungi">Hubungi UBK</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="shell announcement">
+      <div class="announcement-card">
+        <div class="announcement-icon">📢</div>
+        <div>
+          <strong>Selamat datang ke Portal Digital UBK</strong>
+          <span>Semua pautan penting murid dihimpunkan di sini supaya lebih cepat dan mudah dicapai.</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="portal">
+      <div class="shell">
+        <div class="section-title">
+          <span>Akses Pantas</span>
+          <h2>Portal dan perkhidmatan murid</h2>
+          <p>Pilih perkhidmatan yang anda perlukan. Paparan ini direka supaya mudah digunakan dari telefon.</p>
+        </div>
+
+        <div class="portal-grid">
+          <a class="portal-card featured" href="https://semakjadualspm2026.netlify.app/" target="_blank" rel="noopener">
+            <div>
+              <div class="icon">📅</div>
+              <h3>Semak Jadual SPM 2026</h3>
+              <p>Semak jadual peperiksaan SPM 2026 dengan pantas mengikut mata pelajaran melalui portal khas murid SMK Sungai Besar.</p>
+            </div>
+            <span class="open-link">Semak jadual →</span>
+          </a>
+
+          <a class="portal-card" href="https://percubaansemensar.netlify.app/" target="_blank" rel="noopener">
+            <div>
+              <div class="icon">📊</div>
+              <h3>Semak Keputusan Percubaan SPM</h3>
+              <p>Akses semakan keputusan peperiksaan percubaan SPM.</p>
+            </div>
+            <span class="open-link">Buka semakan →</span>
+          </a>
+
+          <a class="portal-card" href="https://semakpakejspm.netlify.app/" target="_blank" rel="noopener">
+            <div>
+              <div class="icon">📚</div>
+              <h3>Semak Pakej SPM</h3>
+              <p>Rujuk pakej mata pelajaran SPM dengan lebih mudah.</p>
+            </div>
+            <span class="open-link">Buka portal →</span>
+          </a>
+
+          <a class="portal-card" href="https://bit.ly/emaildelimasemensar" target="_blank" rel="noopener">
+            <div>
+              <div class="icon">📧</div>
+              <h3>Cek Email DELIMa</h3>
+              <p>Semak alamat email DELIMa murid.</p>
+            </div>
+            <span class="open-link">Buka portal →</span>
+          </a>
+
+          <a class="portal-card" href="https://stemmatchsemensar.netlify.app/" target="_blank" rel="noopener">
+            <div>
+              <div class="icon">🧪</div>
+              <h3>STEMMatch</h3>
+              <p>Terokai padanan minat dan kecenderungan dalam bidang STEM.</p>
+            </div>
+            <span class="open-link">Buka portal →</span>
+          </a>
+
+          <a class="portal-card" href="https://emytargetgpd.netlify.app/emy" target="_blank" rel="noopener">
+            <div>
+              <div class="icon">🎯</div>
+              <h3>eMyTarget GPD</h3>
+              <p>Tetapkan dan semak sasaran pencapaian diri.</p>
+            </div>
+            <span class="open-link">Buka portal →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="hubungi">
+      <div class="shell">
+        <div class="section-title">
+          <span>Saluran Bantuan</span>
+          <h2>Hubungi UBK</h2>
+          <p>Pilih guru UBK yang ingin dihubungi. Nombor telefon tidak dipaparkan pada portal.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Cikgu Huda</h3>
+            <p>Tekan butang di bawah untuk terus membuka WhatsApp.</p>
+            <a class="wa-button" href="https://wa.me/60123291269?text=Assalamualaikum%20cikgu.%20Saya%20ingin%20mendapatkan%20bantuan%20daripada%20Unit%20Bimbingan%20dan%20Kaunseling%20SMK%20Sungai%20Besar." target="_blank" rel="noopener">Hubungi melalui WhatsApp</a>
+          </div>
+
+          <div class="contact-card">
+            <h3>Cikgu Muiez</h3>
+            <p>Tekan butang di bawah untuk terus membuka WhatsApp.</p>
+            <a class="wa-button" href="https://wa.me/60136000442?text=Assalamualaikum%20cikgu.%20Saya%20ingin%20mendapatkan%20bantuan%20daripada%20Unit%20Bimbingan%20dan%20Kaunseling%20SMK%20Sungai%20Besar." target="_blank" rel="noopener">Hubungi melalui WhatsApp</a>
+          </div>
+
+          <div class="contact-card">
+            <h3>Cikgu Rohaida</h3>
+            <p>Tekan butang di bawah untuk terus membuka WhatsApp.</p>
+            <a class="wa-button" href="https://wa.me/60176654252?text=Assalamualaikum%20cikgu.%20Saya%20ingin%20mendapatkan%20bantuan%20daripada%20Unit%20Bimbingan%20dan%20Kaunseling%20SMK%20Sungai%20Besar." target="_blank" rel="noopener">Hubungi melalui WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <span>© 2026 Unit Bimbingan &amp; Kaunseling, SMK Sungai Besar</span>
+      <span>Portal Digital UBK</span>
+    </div>
+  </footer>
+
+</body>
+</html>
