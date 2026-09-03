@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#4c1d95" />
   <title>Portal Digital UBK | SMK Sungai Besar</title>
-
   <style>
     :root {
       --purple-950:#2e1065;
@@ -23,33 +22,16 @@
       --green:#22c55e;
     }
 
-    * {
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
-
-    html {
-      scroll-behavior:smooth;
-    }
-
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
     body {
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
-        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:#f8f7fc;
       color:var(--ink);
       line-height:1.55;
     }
-
-    a {
-      color:inherit;
-      text-decoration:none;
-    }
-
-    img {
-      display:block;
-      max-width:100%;
-    }
+    a { color:inherit; text-decoration:none; }
+    img { display:block; max-width:100%; }
 
     .hero {
       min-height:590px;
@@ -61,13 +43,8 @@
       padding:42px 20px 70px;
       overflow:hidden;
       color:white;
-
       background:
-        linear-gradient(
-          135deg,
-          rgba(46,16,101,.88),
-          rgba(91,33,182,.68)
-        ),
+        linear-gradient(135deg, rgba(46,16,101,.88), rgba(91,33,182,.68)),
         url("assets/smk-sungai-besar.jpg") center/cover no-repeat;
     }
 
@@ -75,19 +52,9 @@
       content:"";
       position:absolute;
       inset:0;
-
       background:
-        radial-gradient(
-          circle at 20% 20%,
-          rgba(255,255,255,.13),
-          transparent 30%
-        ),
-        radial-gradient(
-          circle at 80% 10%,
-          rgba(196,181,253,.22),
-          transparent 28%
-        );
-
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.13), transparent 30%),
+        radial-gradient(circle at 80% 10%, rgba(196,181,253,.22), transparent 28%);
       pointer-events:none;
     }
 
@@ -179,9 +146,7 @@
       color:white;
     }
 
-    .btn:hover {
-      transform:translateY(-2px);
-    }
+    .btn:hover { transform:translateY(-2px); }
 
     .shell {
       width:min(1120px, calc(100% - 32px));
@@ -292,11 +257,7 @@
 
     .portal-card.featured {
       grid-column:span 2;
-      background:linear-gradient(
-        135deg,
-        var(--purple-900),
-        var(--purple-700)
-      );
+      background:linear-gradient(135deg, var(--purple-900), var(--purple-700));
       color:white;
       border-color:transparent;
       min-height:250px;
@@ -384,25 +345,13 @@
     }
 
     .contact-section {
-      background:linear-gradient(
-        180deg,
-        #21143e 0%,
-        #160d2f 100%
-      );
+      background:linear-gradient(180deg, #21143e 0%, #160d2f 100%);
       color:white;
     }
 
-    .contact-section .section-title h2 {
-      color:white;
-    }
-
-    .contact-section .section-title p {
-      color:#cfc6df;
-    }
-
-    .contact-section .section-title span {
-      color:#c4b5fd;
-    }
+    .contact-section .section-title h2 { color:white; }
+    .contact-section .section-title p { color:#cfc6df; }
+    .contact-section .section-title span { color:#c4b5fd; }
 
     .contact-grid {
       display:grid;
@@ -458,11 +407,9 @@
       .portal-grid {
         grid-template-columns:repeat(2, minmax(0,1fr));
       }
-
       .portal-card.featured {
         grid-column:span 2;
       }
-
       .contact-grid {
         grid-template-columns:1fr;
       }
@@ -473,29 +420,23 @@
         min-height:540px;
         padding-bottom:64px;
       }
-
       .logo-wrap {
         width:100px;
         height:100px;
       }
-
       .portal-grid {
         grid-template-columns:1fr;
       }
-
       .portal-card.featured {
         grid-column:span 1;
       }
-
       .section {
         padding:48px 0;
       }
-
       .announcement-card {
         grid-template-columns:42px 1fr;
         padding:17px;
       }
-
       .announcement-icon {
         width:42px;
         height:42px;
@@ -503,528 +444,165 @@
     }
   </style>
 </head>
-
 <body>
 
   <header class="hero">
     <div class="hero-inner">
-
       <div class="logo-wrap">
-        <img
-          src="assets/logo-smk-sungai-besar.png"
-          alt="Logo rasmi SMK Sungai Besar"
-        >
+        <img src="assets/logo-smk-sungai-besar.png" alt="Logo rasmi SMK Sungai Besar">
       </div>
-
-      <div class="eyebrow">
-        Unit Bimbingan &amp; Kaunseling
-      </div>
-
-      <h1>
-        Portal Digital UBK<br>
-        SMK Sungai Besar
-      </h1>
-
-      <p>
-        Satu pusat akses untuk semakan akademik,
-        perancangan SPM, STEM, sasaran diri dan
-        perkhidmatan bimbingan murid.
-      </p>
-
+      <div class="eyebrow">Unit Bimbingan &amp; Kaunseling</div>
+      <h1>Portal Digital UBK<br>SMK Sungai Besar</h1>
+      <p>Satu pusat akses untuk semakan akademik, perancangan SPM, STEM, sasaran diri dan perkhidmatan bimbingan murid.</p>
       <div class="hero-actions">
-        <a class="btn btn-light" href="#portal">
-          Buka Portal
-        </a>
-
-        <a class="btn btn-glass" href="#hubungi">
-          Hubungi UBK
-        </a>
+        <a class="btn btn-light" href="#portal">Buka Portal</a>
+        <a class="btn btn-glass" href="#hubungi">Hubungi UBK</a>
       </div>
-
     </div>
   </header>
 
-
   <main>
-
     <div class="shell announcement">
       <div class="announcement-card">
-
-        <div class="announcement-icon">
-          📢
-        </div>
-
+        <div class="announcement-icon">📢</div>
         <div>
-          <strong>
-            Selamat datang ke Portal Digital UBK
-          </strong>
-
-          <span>
-            Semua pautan penting murid dihimpunkan
-            di sini supaya lebih cepat dan mudah dicapai.
-          </span>
+          <strong>Selamat datang ke Portal Digital UBK</strong>
+          <span>Semua pautan penting murid dihimpunkan di sini supaya lebih cepat dan mudah dicapai.</span>
         </div>
-
       </div>
     </div>
-
 
     <section class="section" id="portal">
-
       <div class="shell">
-
         <div class="section-title">
-
-          <span>
-            Akses Pantas
-          </span>
-
-          <h2>
-            Portal dan perkhidmatan murid
-          </h2>
-
-          <p>
-            Pilih perkhidmatan yang anda perlukan.
-            Paparan ini direka supaya mudah digunakan
-            dari telefon.
-          </p>
-
+          <span>Akses Pantas</span>
+          <h2>Portal dan perkhidmatan murid</h2>
+          <p>Pilih perkhidmatan yang anda perlukan. Paparan ini direka supaya mudah digunakan dari telefon.</p>
         </div>
-
 
         <div class="portal-grid">
-
-
-          <!-- UPUMATCH -->
-
-          <a
-            class="portal-card featured"
-            href="https://abdulmuiez.github.io/upumatch/"
-            target="_blank"
-            rel="noopener"
-          >
-
+          <a class="portal-card featured" href="https://abdulmuiez.github.io/upumatch/" target="_blank" rel="noopener">
             <div>
-
-              <div class="new-badge">
-                Baru • Padanan UPU
-              </div>
-
-              <div class="icon">
-                🎓
-              </div>
-
-              <h3>
-                UPUMatch
-              </h3>
-
-              <p>
-                Kira merit SPM, semak syarat program
-                dan terokai padanan kursus berdasarkan
-                minat serta tahap daya saing merit anda.
-              </p>
-
+              <div class="new-badge">Baru • Padanan UPU</div>
+              <div class="icon">🎓</div>
+              <h3>UPUMatch</h3>
+              <p>Kira merit SPM, semak syarat program dan terokai padanan kursus berdasarkan minat serta tahap daya saing merit anda.</p>
             </div>
-
-            <span class="open-link">
-              Buka UPUMatch →
-            </span>
-
+            <span class="open-link">Buka UPUMatch →</span>
           </a>
 
-
-          <!-- SUBJEKMATCH -->
-
-          <a
-            class="portal-card"
-            href="https://abdulmuiez.github.io/subjekmatch/"
-            target="_blank"
-            rel="noopener"
-          >
-
+          <a class="portal-card" href="https://polyccmatch.cikgumuiez.com/" target="_blank" rel="noopener">
             <div>
-
-              <div class="icon">
-                🧭
-              </div>
-
-              <h3>
-                SubjekMatch
-              </h3>
-
-              <p>
-                Pilih mata pelajaran SPM dan terokai
-                bidang, program serta contoh universiti
-                yang berkaitan tanpa menggunakan
-                markah atau merit.
-              </p>
-
+              <div class="new-badge">Baru • Politeknik & Kolej Komuniti</div>
+              <div class="icon">🎓</div>
+              <h3>PolyCCMatch</h3>
+              <p>Masukkan keputusan SPM dan minat untuk meneroka program Politeknik serta Kolej Komuniti yang sesuai, termasuk laluan alternatif dan tempat program ditawarkan.</p>
             </div>
-
-            <span class="open-link">
-              Buka SubjekMatch →
-            </span>
-
+            <span class="open-link">Buka PolyCCMatch →</span>
+          </a>
+          <a class="portal-card" href="merit/">
+            <div>
+              <div class="icon">🧮</div>
+              <h3>Simulasi Kiraan Merit SPM</h3>
+              <p>Masukkan mata pelajaran dan gred untuk mendapatkan anggaran merit SPM.</p>
+            </div>
+            <span class="open-link">Kira merit saya →</span>
           </a>
 
-
-          <!-- KIRAAN MERIT -->
-
-          <a
-            class="portal-card"
-            href="merit/"
-          >
-
+          <a class="portal-card" href="https://semakjadualspm2026.netlify.app/" target="_blank" rel="noopener">
             <div>
-
-              <div class="icon">
-                🧮
-              </div>
-
-              <h3>
-                Simulasi Kiraan Merit SPM
-              </h3>
-
-              <p>
-                Masukkan mata pelajaran dan gred
-                untuk mendapatkan anggaran merit SPM.
-              </p>
-
+              <div class="icon">📅</div>
+              <h3>Semak Jadual SPM 2026</h3>
+              <p>Semak jadual peperiksaan SPM 2026 dengan pantas mengikut mata pelajaran.</p>
             </div>
-
-            <span class="open-link">
-              Kira merit saya →
-            </span>
-
+            <span class="open-link">Semak jadual →</span>
           </a>
 
-
-          <!-- JADUAL SPM -->
-
-          <a
-            class="portal-card"
-            href="https://semakjadualspm2026.netlify.app/"
-            target="_blank"
-            rel="noopener"
-          >
-
+          <a class="portal-card" href="https://percubaansemensar.netlify.app/" target="_blank" rel="noopener">
             <div>
-
-              <div class="icon">
-                📅
-              </div>
-
-              <h3>
-                Semak Jadual SPM 2026
-              </h3>
-
-              <p>
-                Semak jadual peperiksaan SPM 2026
-                dengan pantas mengikut mata pelajaran.
-              </p>
-
+              <div class="icon">📊</div>
+              <h3>Semak Keputusan Percubaan SPM</h3>
+              <p>Akses semakan keputusan peperiksaan percubaan SPM.</p>
             </div>
-
-            <span class="open-link">
-              Semak jadual →
-            </span>
-
+            <span class="open-link">Buka semakan →</span>
           </a>
 
-
-          <!-- KEPUTUSAN PERCUBAAN -->
-
-          <a
-            class="portal-card"
-            href="https://percubaansemensar.netlify.app/"
-            target="_blank"
-            rel="noopener"
-          >
-
+          <a class="portal-card" href="https://semakpakejspm.netlify.app/" target="_blank" rel="noopener">
             <div>
-
-              <div class="icon">
-                📊
-              </div>
-
-              <h3>
-                Semak Keputusan Percubaan SPM
-              </h3>
-
-              <p>
-                Akses semakan keputusan peperiksaan
-                percubaan SPM.
-              </p>
-
+              <div class="icon">📚</div>
+              <h3>Semak Pakej SPM</h3>
+              <p>Rujuk pakej mata pelajaran SPM dengan lebih mudah.</p>
             </div>
-
-            <span class="open-link">
-              Buka semakan →
-            </span>
-
+            <span class="open-link">Buka portal →</span>
           </a>
 
-
-          <!-- PAKEJ SPM -->
-
-          <a
-            class="portal-card"
-            href="https://semakpakejspm.netlify.app/"
-            target="_blank"
-            rel="noopener"
-          >
-
+          <a class="portal-card" href="https://bit.ly/emaildelimasemensar" target="_blank" rel="noopener">
             <div>
-
-              <div class="icon">
-                📚
-              </div>
-
-              <h3>
-                Semak Pakej SPM
-              </h3>
-
-              <p>
-                Rujuk pakej mata pelajaran SPM
-                dengan lebih mudah.
-              </p>
-
+              <div class="icon">📧</div>
+              <h3>Cek Email DELIMa</h3>
+              <p>Semak alamat email DELIMa murid.</p>
             </div>
-
-            <span class="open-link">
-              Buka portal →
-            </span>
-
+            <span class="open-link">Buka portal →</span>
           </a>
 
-
-          <!-- DELIMA -->
-
-          <a
-            class="portal-card"
-            href="https://bit.ly/emaildelimasemensar"
-            target="_blank"
-            rel="noopener"
-          >
-
+          <a class="portal-card" href="https://stemmatchsemensar.netlify.app/" target="_blank" rel="noopener">
             <div>
-
-              <div class="icon">
-                📧
-              </div>
-
-              <h3>
-                Cek Email DELIMa
-              </h3>
-
-              <p>
-                Semak alamat email DELIMa murid.
-              </p>
-
+              <div class="icon">🧪</div>
+              <h3>STEMMatch</h3>
+              <p>Terokai padanan minat dan kecenderungan dalam bidang STEM.</p>
             </div>
-
-            <span class="open-link">
-              Buka portal →
-            </span>
-
+            <span class="open-link">Buka portal →</span>
           </a>
 
-
-          <!-- STEMMATCH -->
-
-          <a
-            class="portal-card"
-            href="https://stemmatchsemensar.netlify.app/"
-            target="_blank"
-            rel="noopener"
-          >
-
+          <a class="portal-card" href="https://emytargetgpd.netlify.app/" target="_blank" rel="noopener">
             <div>
-
-              <div class="icon">
-                🧪
-              </div>
-
-              <h3>
-                STEMMatch
-              </h3>
-
-              <p>
-                Terokai padanan minat dan kecenderungan
-                dalam bidang STEM.
-              </p>
-
+              <div class="icon">🎯</div>
+              <h3>eMyTarget GPD</h3>
+              <p>Tetapkan dan semak sasaran pencapaian diri.</p>
             </div>
-
-            <span class="open-link">
-              Buka portal →
-            </span>
-
+            <span class="open-link">Buka portal →</span>
           </a>
-
-
-          <!-- EMYTARGET -->
-
-          <a
-            class="portal-card"
-            href="https://emytargetgpd.netlify.app/"
-            target="_blank"
-            rel="noopener"
-          >
-
-            <div>
-
-              <div class="icon">
-                🎯
-              </div>
-
-              <h3>
-                eMyTarget GPD
-              </h3>
-
-              <p>
-                Tetapkan dan semak sasaran pencapaian diri.
-              </p>
-
-            </div>
-
-            <span class="open-link">
-              Buka portal →
-            </span>
-
-          </a>
-
-
         </div>
-
       </div>
-
     </section>
 
-
-    <section
-      class="section contact-section"
-      id="hubungi"
-    >
-
+    <section class="section contact-section" id="hubungi">
       <div class="shell">
-
         <div class="section-title">
-
-          <span>
-            Saluran Bantuan
-          </span>
-
-          <h2>
-            Hubungi UBK
-          </h2>
-
-          <p>
-            Pilih guru UBK yang ingin dihubungi.
-            Nombor telefon tidak dipaparkan pada portal.
-          </p>
-
+          <span>Saluran Bantuan</span>
+          <h2>Hubungi UBK</h2>
+          <p>Pilih guru UBK yang ingin dihubungi. Nombor telefon tidak dipaparkan pada portal.</p>
         </div>
-
 
         <div class="contact-grid">
-
-
           <div class="contact-card">
-
-            <h3>
-              Cikgu Huda
-            </h3>
-
-            <p>
-              Tekan butang di bawah untuk terus
-              membuka WhatsApp.
-            </p>
-
-            <a
-              class="wa-button"
-              href="https://wa.me/60123291269?text=Assalamualaikum%20cikgu.%20Saya%20ingin%20mendapatkan%20bantuan%20daripada%20Unit%20Bimbingan%20dan%20Kaunseling%20SMK%20Sungai%20Besar."
-              target="_blank"
-              rel="noopener"
-            >
-              Hubungi melalui WhatsApp
-            </a>
-
+            <h3>Cikgu Huda</h3>
+            <p>Tekan butang di bawah untuk terus membuka WhatsApp.</p>
+            <a class="wa-button" href="https://wa.me/60123291269?text=Assalamualaikum%20cikgu.%20Saya%20ingin%20mendapatkan%20bantuan%20daripada%20Unit%20Bimbingan%20dan%20Kaunseling%20SMK%20Sungai%20Besar." target="_blank" rel="noopener">Hubungi melalui WhatsApp</a>
           </div>
 
-
           <div class="contact-card">
-
-            <h3>
-              Cikgu Muiez
-            </h3>
-
-            <p>
-              Tekan butang di bawah untuk terus
-              membuka WhatsApp.
-            </p>
-
-            <a
-              class="wa-button"
-              href="https://wa.me/60136000442?text=Assalamualaikum%20cikgu.%20Saya%20ingin%20mendapatkan%20bantuan%20daripada%20Unit%20Bimbingan%20dan%20Kaunseling%20SMK%20Sungai%20Besar."
-              target="_blank"
-              rel="noopener"
-            >
-              Hubungi melalui WhatsApp
-            </a>
-
+            <h3>Cikgu Muiez</h3>
+            <p>Tekan butang di bawah untuk terus membuka WhatsApp.</p>
+            <a class="wa-button" href="https://wa.me/60136000442?text=Assalamualaikum%20cikgu.%20Saya%20ingin%20mendapatkan%20bantuan%20daripada%20Unit%20Bimbingan%20dan%20Kaunseling%20SMK%20Sungai%20Besar." target="_blank" rel="noopener">Hubungi melalui WhatsApp</a>
           </div>
 
-
           <div class="contact-card">
-
-            <h3>
-              Cikgu Rohaida
-            </h3>
-
-            <p>
-              Tekan butang di bawah untuk terus
-              membuka WhatsApp.
-            </p>
-
-            <a
-              class="wa-button"
-              href="https://wa.me/60176654252?text=Assalamualaikum%20cikgu.%20Saya%20ingin%20mendapatkan%20bantuan%20daripada%20Unit%20Bimbingan%20dan%20Kaunseling%20SMK%20Sungai%20Besar."
-              target="_blank"
-              rel="noopener"
-            >
-              Hubungi melalui WhatsApp
-            </a>
-
+            <h3>Cikgu Rohaida</h3>
+            <p>Tekan butang di bawah untuk terus membuka WhatsApp.</p>
+            <a class="wa-button" href="https://wa.me/60176654252?text=Assalamualaikum%20cikgu.%20Saya%20ingin%20mendapatkan%20bantuan%20daripada%20Unit%20Bimbingan%20dan%20Kaunseling%20SMK%20Sungai%20Besar." target="_blank" rel="noopener">Hubungi melalui WhatsApp</a>
           </div>
-
-
         </div>
-
       </div>
-
     </section>
-
   </main>
 
-
   <footer>
-
     <div class="shell">
-
-      <span>
-        © 2026 Unit Bimbingan &amp; Kaunseling,
-        SMK Sungai Besar
-      </span>
-
-      <span>
-        Portal Digital UBK
-      </span>
-
+      <span>© 2026 Unit Bimbingan &amp; Kaunseling, SMK Sungai Besar</span>
+      <span>Portal Digital UBK</span>
     </div>
-
   </footer>
-
 
 </body>
 </html>
